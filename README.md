@@ -51,7 +51,7 @@ Users should be able to:
 
 ### Live Demo
 
-[Add live site URL here](https://your-live-site-url.com)
+[https://johansantana.github.io/vue-advice-generator/](https://johansantana.github.io/vue-advice-generator/)
 
 <hr />
 
