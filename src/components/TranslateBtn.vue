@@ -8,6 +8,7 @@ const isActive = ref(null)
 
 // save lang preference and emit event to parent
 const changeLang = () => {
+  disableBtn()
   isActive.value = !isActive.value
   localStorage.setItem('translate', JSON.stringify(isActive.value))
   emits('languageChange')

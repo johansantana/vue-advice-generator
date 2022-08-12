@@ -6,6 +6,20 @@ import { onMounted, ref } from 'vue'
 const props = defineProps(['number', 'text', 'isTranslated'])
 const emits = defineEmits(['randomize'])
 
+const randomize = () => {
+  disableButton()
+  emits('randomize')
+}
+
+const isButtonDisable = ref(false)
+
+const disableButton = () => {
+  isButtonDisable.value = true
+  setTimeout(() => {
+    isButtonDisable.value = false
+  }, 2000)
+}
+
 const isDesktop = ref(null)
 
 const checkWindowWidth = () => {
@@ -32,7 +46,12 @@ onMounted(() => {
       :src="isDesktop ? dividerDesktop : dividerMobile"
       alt="divider"
     />
-    <button class="dice-btn" @click="$emit('randomize')">
+    <button
+      class="dice-btn"
+      @click="randomize"
+      :class="{ disabled: isButtonDisable }"
+      :disabled="isButtonDisable"
+    >
       <img src="../assets/icon-dice.svg" alt="dice" />
     </button>
   </div>
@@ -113,5 +132,14 @@ onMounted(() => {
 
 .dice-btn:focus {
   outline: none;
+}
+
+.disabled {
+  background-color: hsl(150, 50%, 45%) !important;
+  cursor: default !important;
+}
+
+.disabled:hover {
+  box-shadow: none !important;
 }
 </style>
