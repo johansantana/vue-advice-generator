@@ -1,15 +1,8 @@
 # Frontend Mentor - Advice generator app solution
 
-This is my solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db).
+This is my solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). It has some extra features not described at the challenge, those are page translation to spanish and advice generation cooldown (this one because the API returns the same advice in less than 2 seconds).
 
-## Table of contents
-
-- [Installation](#instalation)
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Live Demo](#live-demo)
-  - [Built with](#built-with)
+Spanish advice take a little bit longer to load since i use another API to translate right on time the advice provided for the advice API
 
 ## Installation
 
@@ -60,3 +53,8 @@ Users should be able to:
 | VueJS                      |
 | -------------------------- |
 | ![vue-icon](./favicon.ico) |
+
+#### APIs
+
+- [Advice Slip JSON API](https://api.adviceslip.com/)
+- [Microsoft Translator Text](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/microsoft-translator-text/)
