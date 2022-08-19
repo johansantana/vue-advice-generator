@@ -1,7 +1,5 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-
-const props = defineProps(['languageTo'])
 const emits = defineEmits(['languageChange'])
 
 const isActive = ref(null)
@@ -20,7 +18,7 @@ onMounted(() => {
 
 <template>
   <button :class="{ active: isActive }" @click="changeLang">
-    {{ languageTo }}
+    <slot />
   </button>
 </template>
 

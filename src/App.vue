@@ -56,10 +56,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <TranslateBtn
-    @languageChange="handleTranslate(state.advice)"
-    :languageTo="state.isTranslated ? 'ES' : 'EN'"
-  />
+  <TranslateBtn @languageChange="handleTranslate(state.advice)">
+    {{ state.isTranslated ? 'ES' : 'EN' }}
+  </TranslateBtn>
   <AdviceCard
     @randomize="showAdvice"
     :number="state.id"
