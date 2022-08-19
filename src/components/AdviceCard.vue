@@ -3,7 +3,13 @@ import Loader from './Loader.vue'
 import dividerMobile from '../assets/pattern-divider-mobile.svg'
 import dividerDesktop from '../assets/pattern-divider-desktop.svg'
 import { onMounted, ref } from 'vue'
-const props = defineProps(['number', 'text', 'isTranslated'])
+
+const props = defineProps({
+  number: Number,
+  text: String,
+  isTranslated: Boolean
+})
+
 const emits = defineEmits(['randomize'])
 
 const randomize = () => {
