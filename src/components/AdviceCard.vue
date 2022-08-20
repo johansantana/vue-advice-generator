@@ -65,7 +65,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .card {
   padding: 2.5em 1em 4em;
   margin: 1em;
