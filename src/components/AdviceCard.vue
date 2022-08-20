@@ -20,7 +20,7 @@ const randomize = () => {
 
 const isButtonDisable = ref(false)
 
-// set a cooldown to the TranslateBtn
+// set a cooldown to the button
 const disableButton = () => {
   isButtonDisable.value = true
   setTimeout(() => {
