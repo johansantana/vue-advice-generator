@@ -12,6 +12,7 @@ const props = defineProps({
 
 const emits = defineEmits(['randomize'])
 
+// function that emits the event
 const randomize = () => {
   disableButton()
   emits('randomize')
@@ -19,6 +20,7 @@ const randomize = () => {
 
 const isButtonDisable = ref(false)
 
+// set a cooldown to the TranslateBtn
 const disableButton = () => {
   isButtonDisable.value = true
   setTimeout(() => {
