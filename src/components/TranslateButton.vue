@@ -17,13 +17,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <button :class="{ active: isActive }" @click="changeLang">
+  <button class="translate-btn" :class="{ active: isActive }" @click="changeLang">
     <slot />
   </button>
 </template>
 
 <style scoped>
-button {
+.translate-btn {
   padding: 0.5em 1em;
   border: none;
   border-radius: 10px;
@@ -39,11 +39,11 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-button:hover {
+.translate-btn:hover {
   box-shadow: 0 0 20px hsl(216, 9%, 31%);
 }
 
-button:focus {
+.translate-btn:focus {
   outline: none;
 }
 

@@ -56,9 +56,9 @@ onMounted(() => {
     />
     <button
       class="dice-btn"
-      @click="randomize"
       :class="{ disabled: isButtonDisable }"
       :disabled="isButtonDisable"
+      @click="randomize"
     >
       <img src="../assets/icon-dice.svg" alt="dice" />
     </button>

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, reactive } from 'vue'
 import AdviceCard from './components/AdviceCard.vue'
-import TranslateBtn from './components/TranslateBtn.vue'
+import TranslateButton from './components/TranslateButton.vue'
 import { translateText } from './services/textTranslator'
 import { fetchAdvice } from './services/adviceSlip'
 
@@ -56,14 +56,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <TranslateBtn @languageChange="handleTranslate(state.advice)">
+  <TranslateButton @languageChange="handleTranslate(state.advice)">
     {{ state.isTranslated ? 'ES' : 'EN' }}
-  </TranslateBtn>
+  </TranslateButton>
   <AdviceCard
-    @randomize="showAdvice"
     :number="state.id"
     :text="state.advice"
     :isTranslated="state.isTranslated"
+    @randomize="showAdvice"
   />
 </template>
 
