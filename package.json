@@ -8,11 +8,11 @@
     "deploy": "npm run build && npx gh-pages -d dist"
   },
   "dependencies": {
-    "gh-pages": "^4.0.0",
-    "vue": "^3.2.37"
+    "gh-pages": "4.0.0",
+    "vue": "3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.1",
-    "vite": "^3.0.1"
+    "@vitejs/plugin-vue": "3.0.1",
+    "vite": "3.0.1"
   }
 }
