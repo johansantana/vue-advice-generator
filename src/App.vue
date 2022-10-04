@@ -59,12 +59,14 @@ onMounted(() => {
   <TranslateButton @languageChange="handleTranslate(state.advice)">
     {{ state.isTranslated ? 'ES' : 'EN' }}
   </TranslateButton>
-  <AdviceCard
-    :number="state.id"
-    :text="state.advice"
-    :isTranslated="state.isTranslated"
-    @randomize="showAdvice"
-  />
+  <Transition name="bounce" appear>
+    <AdviceCard
+      :number="state.id"
+      :text="state.advice"
+      :isTranslated="state.isTranslated"
+      @randomize="showAdvice"
+    />
+  </Transition>
 </template>
 
 <style>
@@ -95,5 +97,23 @@ a {
   display: grid;
   place-items: center;
   height: 100%;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
