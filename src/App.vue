@@ -56,10 +56,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- Commented translate button since Translation API not working -->
-  <!-- <TranslateButton @languageChange="handleTranslate(state.advice)">
+  <TranslateButton @languageChange="handleTranslate(state.advice)">
     {{ state.isTranslated ? 'ES' : 'EN' }}
-  </TranslateButton> -->
+  </TranslateButton>
   <Transition name="bounce" appear>
     <AdviceCard
       :number="state.id"
